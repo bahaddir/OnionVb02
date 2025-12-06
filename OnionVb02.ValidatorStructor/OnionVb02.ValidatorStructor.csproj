@@ -8,11 +8,11 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="12.1.1" />
+    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\Core\OnionVb02.Application\OnionVb02.Application.csproj" />
-    <ProjectReference Include="..\..\Core\OnionVb02.Contract\OnionVb02.Contract.csproj" />
+    <ProjectReference Include="..\Core\OnionVb02.Application\OnionVb02.Application.csproj" />
   </ItemGroup>
 
 </Project>

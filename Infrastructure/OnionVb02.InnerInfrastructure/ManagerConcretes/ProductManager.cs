@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OnionVb02.InnerInfrastructure.ManagerConcretes
 {
-    public class ProductManager(IProductRepository repository, IMapper mapper) : BaseManager<ProductDto, Product>(repository, mapper), IProductManager
+    public class ProductManager(IProductRepository repository, IMapper mapper, IServiceProvider serviceProvider) : BaseManager<ProductDto, Product>(repository, mapper,serviceProvider), IProductManager
     {
         private readonly IProductRepository _repository = repository;
     }

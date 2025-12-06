@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OnionVb02.InnerInfrastructure.ManagerConcretes
 {
-    public class AppUserManager(IAppUserRepository repository,IMapper mapper) : BaseManager<AppUserDto,AppUser>(repository,mapper),IAppUserManager
+    public class AppUserManager(IAppUserRepository repository,IMapper mapper, IServiceProvider serviceProvider) : BaseManager<AppUserDto,AppUser>(repository,mapper, serviceProvider),IAppUserManager
     {
         private readonly IAppUserRepository _repository = repository;
     }
