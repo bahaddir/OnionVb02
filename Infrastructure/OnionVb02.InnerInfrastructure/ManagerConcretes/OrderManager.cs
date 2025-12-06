@@ -11,7 +11,7 @@ using System.Threading.Tasks;
 
 namespace OnionVb02.InnerInfrastructure.ManagerConcretes
 {
-    public class OrderManager(IOrderRepository repository,IMapper mapper) : BaseManager<OrderDto,Order>(repository,mapper),IOrderManager
+    public class OrderManager(IOrderRepository repository,IMapper mapper, IServiceProvider serviceProvider) : BaseManager<OrderDto,Order>(repository,mapper, serviceProvider),IOrderManager
     {
         private readonly IOrderRepository _repository = repository;
     }
