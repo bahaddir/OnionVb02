@@ -1,0 +1,22 @@
+﻿using MediatR;
+using OnionVb02.Contract.RepositoryInterfaces;
+using OnionVb02.Domain.Entities;
+
+namespace OnionVb02.Application.CqrsAndMediatr.Mediator.Handlers.Modify.CategoryCommandHandlers
+{
+    public class RemoveCategoryCommandHandler : IRequestHandler<RemoveCategoryCommand>
+    {
+        private readonly ICategoryRepository _repository;
+
+        public RemoveCategoryCommandHandler(ICategoryRepository repository)
+        {
+            _repository = repository;
+        }
+
+        public async Task Handle(RemoveCategoryCommand request, CancellationToken cancellationToken)
+        {
+            Category value = await _repository.GetByIdAsync(request.Id);
+            await _repository.DeleteAsync(value);
+        }
+    }
+}
