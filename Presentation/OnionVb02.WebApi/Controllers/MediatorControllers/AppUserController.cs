@@ -6,7 +6,7 @@ using OnionVb02.Application.CqrsAndMediatr.Mediator.Queries.AppUserQueries;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Results.AppUserResults;
 using OnionVb02.Domain.Entities;
 
-namespace OnionVb02.WebApi.Controllers
+namespace OnionVb02.WebApi.Controllers.MediatorControllers
 {
     [Route("api/[controller]")]
     [ApiController]
