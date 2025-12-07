@@ -1,4 +1,5 @@
-﻿using AutoMapper;
+﻿/*
+ using AutoMapper;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using OnionVb02.Application.DTOClasses;
@@ -47,3 +48,4 @@ namespace OnionVb02.WebApi.Controllers
 
     }
 }
+*/
