@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ProductCommands;
-using OnionVb02.Application.DTOClasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;

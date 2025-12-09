@@ -1,6 +1,5 @@
 ﻿using FluentValidation;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.AppUserProfileCommands;
-using OnionVb02.Application.DTOClasses;
 
 namespace OnionVb02.ValidatorStructor.Validators.MediatrValidators
 {

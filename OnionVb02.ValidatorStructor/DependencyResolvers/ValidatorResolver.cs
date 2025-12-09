@@ -5,7 +5,6 @@ using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.AppUserProfileComma
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.OrderCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.OrderDetailCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ProductCommands;
-using OnionVb02.Application.DTOClasses;
 using OnionVb02.ValidatorStructor.Validators;
 using System;
 using System.Collections.Generic;
@@ -19,12 +18,7 @@ namespace OnionVb02.ValidatorStructor.DependencyResolvers
     {
         public static void AddValidatorService(this IServiceCollection services)
         {
-            services.AddTransient<IValidator<ProductDto>, ProductValidator>();
-            services.AddTransient<IValidator<CategoryDto>, CategoryValidator>();
-            services.AddTransient<IValidator<AppUserProfileDto>, AppUserProfileValidator>();
-            services.AddTransient<IValidator<AppUserDto>, AppUserValidator>();
-            services.AddTransient<IValidator<OrderDetailDto>, OrderDetailValidator>();
-            services.AddTransient<IValidator<OrderDto>, OrderValidator>();
+            
 
             services.AddTransient<IValidator<CreateProductCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.ProductValidator>();
             services.AddTransient<IValidator<CreateOrderCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.OrderValidator>();
