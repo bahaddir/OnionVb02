@@ -14,6 +14,8 @@ namespace OnionVb02.Domain.Entities
         //Relational Properties
         public virtual AppUser AppUser { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public int? ShipperId { get; set; }
+        public virtual Shipper Shipper { get; set; }
 
     }
 }

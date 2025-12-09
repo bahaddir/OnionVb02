@@ -23,8 +23,12 @@ namespace OnionVb02.Persistence.ContextClasses
             modelBuilder.ApplyConfiguration(new ProductConfiguration());
             modelBuilder.ApplyConfiguration(new OrderConfiguration());
             modelBuilder.ApplyConfiguration(new OrderDetailConfiguration());
+            modelBuilder.ApplyConfiguration(new ShipperConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductAttributeValueConfiguration());
+            modelBuilder.ApplyConfiguration(new ProductAttributeConfiguration());
+
         }
 
-     
+
     }
 }

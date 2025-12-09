@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace OnionVb02.Persistence.RepositoryConcretes
 {
-    public class OrderRepository(MyContext context) : BaseRepository<Order>(context),IOrderRepository
+    public class OrderRepository(MyContext context) : BaseRepository<Order>(context), IOrderRepository
     {
     }
 }
