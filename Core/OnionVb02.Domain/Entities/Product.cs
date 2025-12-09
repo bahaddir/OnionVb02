@@ -16,6 +16,7 @@ namespace OnionVb02.Domain.Entities
         //Relational Properties
         public virtual Category Category { get; set; }
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
+        public virtual ICollection<ProductAttributeValue> AttributeValues { get; set; }
 
     }
 }
