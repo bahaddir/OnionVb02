@@ -1,6 +1,7 @@
 using OnionVb02.Application.DependencyResolvers;
-using OnionVb02.Persistence.DependencyResolvers;
 using OnionVb02.Application.DependencyResolvers;
+using OnionVb02.Persistence.DependencyResolvers;
+using OnionVb02.ValidatorStructor.DependencyResolvers;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -15,6 +16,7 @@ builder.Services.AddDbContextService();
 builder.Services.AddRepositoryService();
 builder.Services.AddHandlerService();
 builder.Services.AddCqrsMapperService();
+builder.Services.AddValidatorService();
 
 var app = builder.Build();
 
