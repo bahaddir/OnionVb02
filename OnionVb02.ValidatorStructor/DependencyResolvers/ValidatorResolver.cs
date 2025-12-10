@@ -4,7 +4,10 @@ using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.AppUserCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.AppUserProfileCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.OrderCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.OrderDetailCommands;
+using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ProductAttributeCommands;
+using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ProductAttributeValueCommands;
 using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ProductCommands;
+using OnionVb02.Application.CqrsAndMediatr.Mediator.Commands.ShipperCommands;
 using OnionVb02.ValidatorStructor.Validators;
 using System;
 using System.Collections.Generic;
@@ -26,6 +29,11 @@ namespace OnionVb02.ValidatorStructor.DependencyResolvers
             services.AddTransient<IValidator<CreateCategoryCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.CategoryValidator>();
             services.AddTransient<IValidator<CreateAppUserCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.AppUserValidator>();
             services.AddTransient<IValidator<CreateAppUserProfileCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.AppUserProfileValidator>();
+
+            services.AddTransient<IValidator<CreateProductAttributeCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.ProductAttributeValidator>();
+            services.AddTransient<IValidator<CreateShipperCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.ShipperValidator>();
+            services.AddTransient<IValidator<CreateProductAttributeValueCommand>, OnionVb02.ValidatorStructor.Validators.MediatrValidators.ProductAttributeValueValidator>();
+
         }
     }
 }
