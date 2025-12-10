@@ -19,6 +19,7 @@ namespace OnionVb02.Application.CqrsAndMediatr.Mediator.Handlers.Modify.OrderCom
             Order value = await _repository.GetByIdAsync(request.Id);
             value.ShippingAddress = request.ShippingAddress;
             value.AppUserId = request.AppUserId;
+            value.ShipperId = request.ShipperId;
             value.Status = Domain.Enums.DataStatus.Updated;
             value.UpdatedDate = DateTime.Now;
             await _repository.SaveChangesAsync();

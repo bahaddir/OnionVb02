@@ -27,7 +27,8 @@ namespace OnionVb02.Application.CqrsAndMediatr.Mediator.Handlers.Read.ReadOrderP
             {
                 Id = x.Id,
                 ShippingAddress = x.ShippingAddress,
-                AppUserId = x.AppUserId
+                AppUserId = x.AppUserId,
+                ShipperId = x.ShipperId
             }).ToList();
         }
     }
