@@ -5,6 +5,8 @@
         public int Id { get; set; }
         public string ShippingAddress { get; set; }
         public int? AppUserId { get; set; }
+        public int? ShipperId { get; set; }
+
 
     }
 }

@@ -26,7 +26,8 @@ namespace OnionVb02.Application.CqrsAndMediatr.Mediator.Handlers.Modify.OrderCom
                 CreatedDate = DateTime.Now,
                 Status = Domain.Enums.DataStatus.Inserted,
                 ShippingAddress = request.ShippingAddress,
-                AppUserId = request.AppUserId
+                AppUserId = request.AppUserId,
+                ShipperId = request.ShipperId
             });
         }
     }
